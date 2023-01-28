@@ -1,0 +1,128 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url("/imgs/background3.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 1.3fr 1.2fr;
+    grid-template-rows: 0.3fr 2.2fr 1.2fr 0.2fr;
+    gap: 0xp 0px;
+    height: 100vh;
+    grid-template-areas: "Header Header Header" "Main Main Main" "Main Main Main" "Footer Footer Footer";
+}
+
+.Header {
+    background-color: none;
+    grid-area: Header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    height: max-content;
+    position: fixed top;
+}
+
+.Main {
+    grid-area: Main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.Main h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 4em;
+    padding: 1em;
+    font-family: 'Poppins', sans-serif;
+    color: #fbf7ff;
+}
+
+.Main p {
+    text-align: center;
+    font-size: 2em;
+    padding: 1em;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.Footer {
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    grid-area: Footer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 24px;
+    padding-left: 0.7em;
+}
+
+.logo a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 2px 2px 0px transparent;
+    transition: .2s ease-in-out;
+}
+
+.logo a:hover {
+    box-shadow: 2px 2px 0px white;
+    transition: .2s ease-in-out;
+}
+
+.navwrapper {
+    background-color: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    height: auto;
+    padding-right: 2em;
+}
+
+.navwrapper a {
+    text-decoration: none;
+    color: #fbf7ff;
+    font-size: large;
+    padding: 16px 24px;
+    align-content: center;
+    border-bottom: 4px solid transparent;
+    transition: .2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navwrapper a:hover {
+    border-bottom: 4px solid white;
+    transition: .2s ease-in-out;
+}
+
+@media screen and (max-width: 850px) {
+    .Main h1 {
+        font-size: clamp(1rem, 100%, 5rem);
+    }
+}

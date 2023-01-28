@@ -1,0 +1,167 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .container {
+        display: grid;
+        z-index: 10;
+        grid-template-columns: 0.3fr 1.5fr 1.2fr;
+        grid-template-rows: 0.3fr 2.2fr 1.3fr 0.2fr;
+        gap: 0xp 0px;
+        height: 100vh;
+        grid-template-areas: "Header Header Header" "Sidebar Main Main" "Sidebar Main Main" "Footer Footer Footer";
+    }
+    
+    .Header {
+        grid-area: Header;
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        height: max-content;
+        min-width: 100%;
+        border-bottom: 2px solid #101010;
+    }
+    
+    .Sidebar {
+        grid-area: Sidebar;
+        z-index: 100;
+        background-color: #f5f5f5;
+        height: 2.5fr;
+        overflow-y: scroll;
+    }
+    
+    .Main {
+        overflow-y: scroll;
+        grid-area: Main;
+        background-color: #ebebeb;
+    }
+    
+    .Main hr {
+        text-align: center;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .Main h1 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        padding: 1em;
+    }
+    
+    .Main p {
+        padding: 1.5em;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+    }
+    /*.Main2 {
+    overflow-y: scroll;
+    grid-area: Main2;
+    background-color: #ebebeb;
+    }*/
+    
+    .Footer {
+        grid-area: Footer;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        border-top: 2px solid #101010;
+    }
+    
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 24px;
+        padding-left: 0.7em;
+    }
+    
+    .logo a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 2px 2px 0px transparent;
+        transition: .5s ease-in-out;
+    }
+    
+    .logo a:hover {
+        box-shadow: 2px 2px 0px #101010;
+        transition: .5s ease-in-out;
+    }
+    
+    .navwrapper {
+        position: sticky;
+        top: 0.3fr;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        height: auto;
+        padding-right: 2em;
+    }
+    
+    .navwrapper a {
+        text-decoration: none;
+        color: black;
+        font-size: large;
+        padding: 16px 24px;
+        align-content: center;
+        border-bottom: 3px solid transparent;
+        transition: .3s ease-in-out;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .navwrapper a:hover {
+        border-bottom: 3px solid black;
+        transition: .3s ease-in-out;
+    }
+    
+    .sidebarlist {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .sidebarlist a {
+        text-decoration: none;
+        display: flex;
+        color: black;
+        padding: .3em;
+        font-size: large;
+        font-family: 'Poppins', sans-serif;
+        border-right: 3px solid transparent;
+        transition: .3s ease-in-out;
+    }
+    
+    .sidebarlist a:hover {
+        border-right: 3px solid black;
+        transition: .3s ease-in-out;
+        background-color: #d8d8d8;
+    }
+    
+    .sidebarlist a:active {
+        background-color: #d8d8d8;
+        border-right: 3px solid black;
+    }

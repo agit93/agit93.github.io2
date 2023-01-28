@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="imagestyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Stars</title>
+    <link rel="icon" type="image/x-icon" href="/imgs/kicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="Header">
+            <logo class="logo">
+                <a href="index.html"><img src="/imgs/kosmiklogo.png" alt="logo"></a>
+            </logo>
+            <!--<div class="search">
+                <input type="text" placeholder="Search...">
+            </div>-->
+            <nav class="navwrapper">
+                <a href="solarsystem.html">Solar System</a>
+                <a class="active" href="stars.html">Stars</a>
+                <a href="nebulae.html">Nebulae</a>
+                <a href="galaxies.html">Galaxies</a>
+                <a href="theuniverse.html">The Universe</a>
+                <audio id="click" preload="auto">
+                    <source src="/sounds/mousesound.wav">
+                </audio>
+            </nav>
+        </div>
+        <div class="Sidebar">
+            <ul class="sidebarlist">
+                <a href="#">Proxima<br>Centauri</a>
+                <a href="#">Rigel</a>
+            </ul>
+        </div>
+        <div class="Main">
+            <h1>Stars</h1>
+            <hr>
+            <div class="pic">
+                <image src="/imgs/stars.png"></image>
+            </div>
+            <hr>
+            <div class="Footer">
+                <p>This content was created by Austin Higgins, 2022.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var clickOne = $("#click")[0];
+        $(".navwrapper a, logo, .sidebarlist a")
+            .mouseenter(function() {
+                clickOne.play();
+            })
+    </script>
+</body>
+
+</html>

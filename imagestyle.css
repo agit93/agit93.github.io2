@@ -1,0 +1,264 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url("/imgs/background3.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: grid;
+    z-index: 10;
+    grid-template-columns: 1.2fr 1.5fr 0.3fr;
+    grid-template-rows: 0.3fr 0.3fr 2.2fr 1.0fr 0.2fr;
+    gap: 0xp 0px;
+    height: 100vh;
+    grid-template-areas: "Header Header Header" "Main Main Sidebar" "Main Main Sidebar" "Main Main Sidebar" "Main Main Sidebar";
+}
+
+.Header {
+    grid-area: Header;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    height: max-content;
+    min-width: max-content;
+}
+
+.Sidebar {
+    background-color: #d6d6d6;
+    grid-area: Sidebar;
+    z-index: 100;
+    height: 2.5fr;
+    overflow-y: scroll;
+    min-width: max-content;
+}
+
+.Main {
+    overflow-y: scroll;
+    grid-area: Main;
+    background-color: #d6d6d6;
+    min-width: min-content;
+}
+
+.Main hr {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Main div {
+    text-align: center;
+    padding: 1em;
+}
+
+.Main img {
+    text-align: center;
+    max-width: 35em;
+    max-height: 35em;
+    border: 3px solid #202020;
+    box-shadow: 0px 0px 4px #101010;
+}
+
+.Main h1 {
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: auto;
+    max-width: auto;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em;
+}
+
+.Main p:not(.Footer p) {
+    color: black;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 1em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    border-left: 1px solid black;
+}
+
+.Footer {
+    grid-area: Footer;
+    background-color: #d6d6d6;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.Footer p {
+    color: black;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    max-height: max-content;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 24px;
+    padding-left: 0.7em;
+}
+
+.logo a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 2px 2px 0px transparent;
+    transition: .2s ease-in-out;
+}
+
+.logo a:hover {
+    box-shadow: 2px 2px 0px white;
+    transition: .2s ease-in-out;
+}
+
+.navwrapper {
+    position: sticky;
+    top: 0.3fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    height: auto;
+    padding-right: 2em;
+}
+
+.navwrapper a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    padding: 16px 24px;
+    align-content: center;
+    border-bottom: 4px solid transparent;
+    transition: .2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navwrapper a.active {
+    border-bottom: 4px solid white;
+}
+
+.navwrapper a:hover:not(.active) {
+    border-bottom: 4px solid white;
+    transition: .2s ease-in-out;
+}
+
+.sidebarlist {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebarlist a {
+    text-decoration: none;
+    display: flex;
+    color: black;
+    padding: .3em;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+    border-right: 4px solid transparent;
+    transition: .3s ease-in-out;
+}
+
+.sidebarlist a.active {
+    background-color: #f1f1f1;
+    border-right: 4px solid black;
+}
+
+.sidebarlist a:hover:not(.active) {
+    border-right: 4px solid black;
+    transition: .3s ease-in-out;
+    background-color: #f1f1f1;
+}
+
+.Sidebar::-webkit-scrollbar {
+    width: 1px;
+}
+
+.Sidebar::-webkit-scrollbar-track {
+    background: #d6d6d6;
+}
+
+.Sidebar::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+}
+
+.Sidebar::-webkit-scrollbar-thumb:hover {
+    background: #d6d6d6;
+}
+
+.Main::-webkit-scrollbar {
+    width: 1px;
+}
+
+.Main::-webkit-scrollbar-track {
+    background: #d6d6d6;
+}
+
+.Main::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+}
+
+.Main::-webkit-scrollbar-thumb:hover {
+    background: #d6d6d6;
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        grid-template-areas: "Header Header Header" "Sidebar Sidebar Sidebar" "Main Main Main" "Main Main Main" "Main Main Main";
+    }
+    .sidebar {
+        overflow-x: scroll;
+    }
+    .sidebarlist {
+        flex-direction: row;
+    }
+    .sidebarlist a {
+        border-bottom: 2px solid transparent;
+    }
+    .sidebarlist a.active {
+        border-bottom: 2px solid black;
+    }
+    .sidebarlist a:hover:not(.active) {
+        border-bottom: 2px solid black;
+    }
+    .Main img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+    .Main h1 {
+        font-size: clamp(3rem, 100%, 5rem);
+    }
+}
